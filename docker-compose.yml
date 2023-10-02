@@ -1,0 +1,19 @@
+version: '3.0'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: tiny_url_redis
+    restart: always
+    logging:
+      driver: none
+    ports:
+      - '127.0.0.1:6379:6379'
+    volumes:
+      - ~/Docker/redis/data:/data
+    networks:
+      - tiny_url
+
+networks:
+  tiny_url:
+    driver: bridge
