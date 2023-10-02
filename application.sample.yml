@@ -1,0 +1,16 @@
+# Base Configs
+APP_NAME: "tiny-url"
+APP_VERSION: 0.0.1
+APP_ENVIRONMENT: "staging"
+APP_WEB_PORT: 8181
+APP_DNS: "http://localhost:8181"
+APP_LOG_LEVEL: "DEBUG"
+APP_HEALTH_CHECK_API_PATH: "/ping"
+
+## Redis Configs
+REDIS_HOST: "localhost"
+REDIS_PORT: 6379
+
+## Analytics Configs
+TOP_TRANSFORMATION_PAGE_SIZE: 3
+TOP_TRAFFIC_PAGE_SIZE: 3
