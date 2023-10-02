@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "b9fa544f-0519-4e05-a0a2-4a3e17af2c9f",
+		"name": "Tiny-URL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29713773"
+	},
+	"item": [
+		{
+			"name": "Generate Tiny URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"original_url\": \"https://github.com/swaggo/swag\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/v1/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"v1",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Analytics - Highest Transformations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8181/v1/analytics/domains/highest_transformation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"v1",
+						"analytics",
+						"domains",
+						"highest_transformation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Analytics - Highest Traffic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/v1/analytics/domains/highest_traffic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"v1",
+						"analytics",
+						"domains",
+						"highest_traffic"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
